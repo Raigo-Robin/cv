@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("fonts/Montserrat-Regular.ttf") format("truetype");
@@ -13,7 +19,6 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  box-sizing: border-box;
   background-color: cornsilk;
 }
 
@@ -27,8 +32,6 @@ header {
   background-color: rgb(236, 178, 178);
   padding: 1rem;
   border-radius: 0.5rem;
-  box-sizing: border-box;
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,6 +40,7 @@ header {
 
 .nav h1 {
   margin: 0;
+  font-size: 1.5rem;
 }
 
 .links {
@@ -51,6 +55,10 @@ header {
   font-weight: 500;
 }
 
+.links a.active {
+  color: white;
+}
+
 .links a:hover {
   text-decoration: underline;
 }
@@ -58,29 +66,38 @@ header {
 main {
   width: 100%;
   flex: 1;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 2rem 0;
 }
 
 .intro {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  max-width: 48rem;
 }
 
-.intro h2 {
+.first-container {
+  width: 100%;
+  max-width: 48rem;
+  background-color: rgb(141, 215, 213);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.first-container h2 {
+  margin-top: 0;
   margin-bottom: 0.5rem;
   color: #1a202c;
 }
 
-.intro p {
+.first-container p {
   margin: 0;
   color: #4a5568;
+  line-height: 1.6;
 }
+
 .container-row {
   display: flex;
   flex-direction: row;
@@ -88,8 +105,7 @@ main {
   gap: 2rem;
   width: 100%;
   max-width: 84rem;
-  margin: 2rem 0;
-  box-sizing: border-box;
+  margin-bottom: 2rem;
 }
 
 .main-content {
@@ -97,11 +113,16 @@ main {
   background-color: rgb(250, 238, 171);
   padding: 2rem;
   border-radius: 0.5rem;
-  box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-content h2,
+.main-content h3 {
+  margin: 0.25rem 0;
 }
 
 footer {
@@ -109,15 +130,18 @@ footer {
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
-  box-sizing: border-box;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
 }
 
-@media (max-width: 600px) {
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
   .nav {
     flex-direction: column;
     gap: 1rem;
@@ -127,12 +151,10 @@ footer {
   .links {
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 0.5rem;
   }
 
   .container-row {
     flex-direction: column;
     gap: 1.5rem;
-    padding: 0 1rem;
   }
 }
