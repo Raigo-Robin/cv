@@ -141,6 +141,83 @@ header {
   color: #334155;
 }
 
+#github-card {
+  max-width: 24rem;
+}
+
+#github-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  margin-bottom: 1rem;
+}
+
+#github-card p {
+  margin: 1rem 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+#github-card .links {
+  margin-top: auto;
+}
+
+#github-repos-container {
+  flex: 2 1 0;
+  text-align: left;
+  align-items: flex-start;
+}
+
+#github-repos-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+#repos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.repo-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.repo-item .repo-title {
+  justify-content: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.repo-item .repo-title a {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.repo-item p {
+  margin: 0.25rem 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.repo-item span {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.repo-status-msg {
+  color: #64748b;
+}
+
+.repo-error-msg {
+  color: #ef4444;
+}
+
 footer {
   background-color: #1e293b;
   width: 100%;
@@ -186,5 +263,9 @@ footer p {
   .container-row {
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  #github-card {
+    max-width: 100%;
   }
 }
